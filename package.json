@@ -19,7 +19,8 @@
     "heap",
     "es6",
     "data",
-    "structure"
+    "structure",
+    "typescript"
   ],
   "devDependencies": {
     "ava": "1.4.1",
