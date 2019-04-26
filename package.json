@@ -1,7 +1,7 @@
 {
   "name": "mheap",
   "version": "0.0.0",
-  "description": "🌲 Binary search trees for ES6",
+  "description": "🌳 Binary min & max heaps for ES6",
   "license": "MIT",
   "repository": "klaussinani/mheap",
   "author": {
