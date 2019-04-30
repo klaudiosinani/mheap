@@ -17,6 +17,12 @@ class Heap {
   isEmpty() {
     return this._data.length === 0;
   }
+
+  toArray() {
+    const array = [];
+    this._data.forEach(node => array.push(node));
+    return array;
+  }
 }
 
 module.exports = Heap;

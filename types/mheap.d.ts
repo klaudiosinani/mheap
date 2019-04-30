@@ -21,6 +21,7 @@ declare namespace heap {
     readonly size: number;
     clear(): this;
     isEmpty(): boolean;
+    toArray(): Node<T>[];
   }
 }
 
