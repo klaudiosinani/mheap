@@ -11,6 +11,8 @@ declare namespace node {
 }
 
 declare namespace heap {
+  interface Node<T> extends node.Instance<T> {}
+
   export interface Constructor {
     new <T = any>(): Instance<T>;
   }
