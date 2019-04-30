@@ -9,6 +9,11 @@ class Heap {
     return this._data.length;
   }
 
+  clear() {
+    this._data = [];
+    return this;
+  }
+
   isEmpty() {
     return this._data.length === 0;
   }
