@@ -6,6 +6,7 @@ declare namespace node {
   export interface Instance<T> {
     value: T;
     readonly key: number;
+    toPair(): [number, T];
   }
 }
 
