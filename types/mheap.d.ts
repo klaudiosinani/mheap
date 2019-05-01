@@ -29,6 +29,7 @@ declare namespace heap {
     parent(index: number): Node<T> | undefined;
     parentIndex(index: number): number;
     right(index: number): Node<T> | undefined;
+    rightIndex(index: number): number;
     search(key: number): Node<T> | undefined;
     toArray(): Node<T>[];
     toPairs(): [number, T][];
