@@ -59,7 +59,7 @@ class Heap {
   }
 
   right(index) {
-    return this._data[(2 * index) + 2];
+    return this._data[this.rightIndex(index)];
   }
 
   rightIndex(index) {
