@@ -38,6 +38,10 @@ class Heap {
     return array;
   }
 
+  left(index) {
+    return this._data[(2 * index) + 1];
+  }
+
   node(index) {
     return this._data[index];
   }
