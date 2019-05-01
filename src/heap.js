@@ -5,6 +5,10 @@ class Heap {
     this._data = [];
   }
 
+  get root() {
+    return this._data[0];
+  }
+
   get size() {
     return this._data.length;
   }
