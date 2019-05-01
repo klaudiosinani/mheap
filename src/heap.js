@@ -51,7 +51,7 @@ class Heap {
   }
 
   parent(index) {
-    return this._data[Math.floor((index - 1) / 2)];
+    return this._data[this.parentIndex(index)];
   }
 
   parentIndex(index) {
