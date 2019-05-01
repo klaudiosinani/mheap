@@ -25,6 +25,7 @@ declare namespace heap {
     isEmpty(): boolean;
     keys(): number[];
     left(index: number): Node<T> | undefined;
+    leftIndex(index: number): number;
     node(index: number): Node<T> | undefined;
     parent(index: number): Node<T> | undefined;
     parentIndex(index: number): number;
