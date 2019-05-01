@@ -38,6 +38,10 @@ class Heap {
     return array;
   }
 
+  node(index) {
+    return this._data[index];
+  }
+
   search(key) {
     for (const node of this._data) {
       if (node.key === key) {
