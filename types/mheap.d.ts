@@ -21,6 +21,7 @@ declare namespace heap {
     readonly root: Node<T> | undefined;
     readonly size: number;
     clear(): this;
+    includes(key: number): boolean;
     isEmpty(): boolean;
     toArray(): Node<T>[];
   }
