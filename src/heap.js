@@ -58,6 +58,10 @@ class Heap {
     return this._data[(2 * index) + 2];
   }
 
+  rightIndex(index) {
+    return (2 * index) + 2;
+  }
+
   search(key) {
     for (const node of this._data) {
       if (node.key === key) {
