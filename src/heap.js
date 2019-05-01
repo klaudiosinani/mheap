@@ -18,6 +18,16 @@ class Heap {
     return this;
   }
 
+  includes(key) {
+    for (const node of this._data) {
+      if (node.key === key) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   isEmpty() {
     return this._data.length === 0;
   }
