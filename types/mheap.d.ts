@@ -18,6 +18,7 @@ declare namespace heap {
   }
 
   export interface Instance<T> {
+    readonly root: Node<T> | undefined;
     readonly size: number;
     clear(): this;
     isEmpty(): boolean;
