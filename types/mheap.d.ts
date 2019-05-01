@@ -24,6 +24,7 @@ declare namespace heap {
     includes(key: number): boolean;
     isEmpty(): boolean;
     toArray(): Node<T>[];
+    toPairs(): [number, T][];
   }
 }
 

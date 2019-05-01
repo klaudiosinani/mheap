@@ -37,6 +37,12 @@ class Heap {
     this._data.forEach(node => array.push(node));
     return array;
   }
+
+  toPairs() {
+    const array = [];
+    this._data.forEach(node => array.push(node.toPair()));
+    return array;
+  }
 }
 
 module.exports = Heap;
