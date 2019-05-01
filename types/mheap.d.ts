@@ -23,6 +23,7 @@ declare namespace heap {
     clear(): this;
     includes(key: number): boolean;
     isEmpty(): boolean;
+    search(key: number): Node<T> | undefined;
     toArray(): Node<T>[];
     toPairs(): [number, T][];
   }

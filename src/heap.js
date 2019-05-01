@@ -32,6 +32,16 @@ class Heap {
     return this._data.length === 0;
   }
 
+  search(key) {
+    for (const node of this._data) {
+      if (node.key === key) {
+        return node;
+      }
+    }
+
+    return undefined;
+  }
+
   toArray() {
     const array = [];
     this._data.forEach(node => array.push(node));
