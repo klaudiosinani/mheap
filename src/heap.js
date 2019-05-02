@@ -13,6 +13,23 @@ class Heap {
     return this._data.length;
   }
 
+  children(index) {
+    const children = [];
+
+    const left = this.left(index);
+    const right = this.right(index);
+
+    if (left) {
+      children.push(left);
+    }
+
+    if (right) {
+      children.push(right);
+    }
+
+    return children;
+  }
+
   clear() {
     this._data = [];
     return this;

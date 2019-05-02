@@ -20,6 +20,7 @@ declare namespace heap {
   export interface Instance<T> {
     readonly root: Node<T> | undefined;
     readonly size: number;
+    children(index: number): Node<T>[];
     clear(): this;
     includes(key: number): boolean;
     isEmpty(): boolean;
