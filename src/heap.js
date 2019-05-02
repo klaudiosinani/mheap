@@ -35,6 +35,10 @@ class Heap {
     return this;
   }
 
+  degree(index) {
+    return this.children(index).length;
+  }
+
   includes(key) {
     for (const node of this._data) {
       if (node.key === key) {
