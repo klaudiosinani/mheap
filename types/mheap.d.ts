@@ -24,6 +24,7 @@ declare namespace heap {
     clear(): this;
     includes(key: number): boolean;
     isEmpty(): boolean;
+    isLeaf(index: number): boolean;
     keys(): number[];
     left(index: number): Node<T> | undefined;
     leftIndex(index: number): number;

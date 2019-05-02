@@ -49,6 +49,10 @@ class Heap {
     return this._data.length === 0;
   }
 
+  isLeaf(index) {
+    return !this.left(index) && !this.right(index);
+  }
+
   keys() {
     const array = [];
     this._data.forEach(node => array.push(node.key));
