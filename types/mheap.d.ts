@@ -11,6 +11,8 @@ declare namespace node {
 }
 
 declare namespace heap {
+  type Degree = 0 | 1 | 2;
+
   interface Node<T> extends node.Instance<T> {}
 
   export interface Constructor {
