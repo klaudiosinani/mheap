@@ -79,6 +79,18 @@ class Heap {
     return -1;
   }
 
+  internalNodes() {
+    const nodes = [];
+
+    this._data.forEach((node, index) => {
+      if (this.isInternalNode(index)) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   isEmpty() {
     return this._data.length === 0;
   }
