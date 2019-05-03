@@ -67,6 +67,10 @@ class Heap {
     return this._data.length === 0;
   }
 
+  isFullNode(index) {
+    return this.left(index) !== undefined && this.right(index) !== undefined;
+  }
+
   isLeafNode(index) {
     return !this.left(index) && !this.right(index);
   }
