@@ -49,6 +49,20 @@ class Heap {
     return false;
   }
 
+  indexOf(key) {
+    let index = 0;
+
+    for (const node of this._data) {
+      if (node.key === key) {
+        return index;
+      }
+
+      index += 1;
+    }
+
+    return -1;
+  }
+
   isEmpty() {
     return this._data.length === 0;
   }

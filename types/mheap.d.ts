@@ -26,6 +26,7 @@ declare namespace heap {
     clear(): this;
     degree(index: number): Degree;
     includes(key: number): boolean;
+    indexOf(key: number): number;
     isEmpty(): boolean;
     isLeaf(index: number): boolean;
     keys(): number[];
