@@ -71,6 +71,10 @@ class Heap {
     return this.left(index) !== undefined && this.right(index) !== undefined;
   }
 
+  isInternalNode(index) {
+    return this.left(index) !== undefined || this.right(index) !== undefined;
+  }
+
   isLeafNode(index) {
     return !this.left(index) && !this.right(index);
   }
