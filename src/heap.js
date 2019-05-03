@@ -80,7 +80,7 @@ class Heap {
   }
 
   isPartialNode(index) {
-    this.degree(index) === 1;
+    return this.degree(index) === 1;
   }
 
   keys() {
