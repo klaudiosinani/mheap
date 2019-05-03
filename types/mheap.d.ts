@@ -29,6 +29,7 @@ declare namespace heap {
     indexOf(key: number): number;
     isEmpty(): boolean;
     isFullNode(index: number): boolean;
+    isInternalNode(index: number): boolean;
     isLeafNode(index: number): boolean;
     keys(): number[];
     left(index: number): Node<T> | undefined;
