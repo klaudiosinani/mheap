@@ -67,7 +67,7 @@ class Heap {
     return this._data.length === 0;
   }
 
-  isLeaf(index) {
+  isLeafNode(index) {
     return !this.left(index) && !this.right(index);
   }
 
