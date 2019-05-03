@@ -79,6 +79,10 @@ class Heap {
     return !this.left(index) && !this.right(index);
   }
 
+  isPartialNode(index) {
+    this.degree(index) === 1;
+  }
+
   keys() {
     const array = [];
     this._data.forEach(node => array.push(node.key));
