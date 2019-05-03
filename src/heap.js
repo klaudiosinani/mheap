@@ -39,6 +39,18 @@ class Heap {
     return this.children(index).length;
   }
 
+  fullNodes() {
+    const nodes = [];
+
+    this._data.forEach((node, index) => {
+      if (this.isFullNode(index)) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   height() {
     return Math.ceil(Math.log2(this.size + 1)) - 1;
   }
