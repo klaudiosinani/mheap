@@ -39,6 +39,10 @@ class Heap {
     return this.children(index).length;
   }
 
+  height() {
+    return Math.ceil(Math.log2(this.size + 1)) - 1;
+  }
+
   includes(key) {
     for (const node of this._data) {
       if (node.key === key) {

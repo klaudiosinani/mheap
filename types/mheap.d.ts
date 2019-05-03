@@ -25,6 +25,7 @@ declare namespace heap {
     children(index: number): Node<T>[];
     clear(): this;
     degree(index: number): Degree;
+    height(): number;
     includes(key: number): boolean;
     indexOf(key: number): number;
     isEmpty(): boolean;
