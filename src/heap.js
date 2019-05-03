@@ -93,6 +93,18 @@ class Heap {
     return array;
   }
 
+  leafNodes() {
+    const nodes = [];
+
+    this._data.forEach((node, index) => {
+      if (this.isLeafNode(index)) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   left(index) {
     return this._data[this.leftIndex(index)];
   }

@@ -34,6 +34,7 @@ declare namespace heap {
     isLeafNode(index: number): boolean;
     isPartialNode(index: number): boolean;
     keys(): number[];
+    leafNodes(): Node<T>[];
     left(index: number): Node<T> | undefined;
     leftIndex(index: number): number;
     node(index: number): Node<T> | undefined;
