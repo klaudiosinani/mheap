@@ -42,6 +42,7 @@ declare namespace heap {
     node(index: number): Node<T> | undefined;
     parent(index: number): Node<T> | undefined;
     parentIndex(index: number): number;
+    partialNodes(): Node<T>[];
     right(index: number): Node<T> | undefined;
     rightIndex(index: number): number;
     search(key: number): Node<T> | undefined;
