@@ -149,6 +149,18 @@ class Heap {
     return Math.floor((index - 1) / 2);
   }
 
+  partialNodes() {
+    const nodes = [];
+
+    this._data.forEach((node, index) => {
+      if (this.isPartialNode(index)) {
+        nodes.push(node);
+      }
+    });
+
+    return nodes;
+  }
+
   right(index) {
     return this._data[this.rightIndex(index)];
   }
