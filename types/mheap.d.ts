@@ -66,7 +66,6 @@ declare namespace min {
 }
 
 declare namespace mheap {
-  export interface Heap<T = any> extends heap.Instance<T> {}
   export interface Node<T = any> extends node.Instance<T> {}
 }
 
