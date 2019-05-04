@@ -13,6 +13,10 @@ class Heap {
     return this._data.length;
   }
 
+  _swap(x, y) {
+    [this._data[x], this._data[y]] = [this._data[y], this._data[x]];
+  }
+
   children(index) {
     const children = [];
 
