@@ -48,6 +48,7 @@ declare namespace heap {
     search(key: number): Node<T> | undefined;
     toArray(): Node<T>[];
     toPairs(): [number, T][];
+    update(key: number, value: T): this;
     values(): T[];
   }
 }
