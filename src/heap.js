@@ -191,6 +191,16 @@ class Heap {
     return array;
   }
 
+  update(key, value) {
+    const targetIndex = this.indexOf(key);
+
+    if (targetIndex >= 0) {
+      this._data[targetIndex].value = value;
+    }
+
+    return this;
+  }
+
   values() {
     const array = [];
     this._data.forEach(node => array.push(node.value));
