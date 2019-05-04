@@ -72,7 +72,8 @@ declare namespace mheap {
 }
 
 declare const mheap: {
-  Heap: heap.Constructor;
+  Max: max.Constructor;
+  Min: min.Constructor;
   Node: node.Constructor;
 };
 
