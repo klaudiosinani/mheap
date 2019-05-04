@@ -57,6 +57,12 @@ declare namespace max {
   export interface Instance<T = any> extends heap.Instance<T> {}
 }
 
+declare namespace min {
+  export interface Constructor {
+    new <T = any>(): Instance<T>;
+  }
+}
+
 declare namespace mheap {
   export interface Heap<T = any> extends heap.Instance<T> {}
   export interface Node<T = any> extends node.Instance<T> {}
