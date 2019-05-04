@@ -15,10 +15,6 @@ declare namespace heap {
 
   interface Node<T> extends node.Instance<T> {}
 
-  export interface Constructor {
-    new <T = any>(): Instance<T>;
-  }
-
   export interface Instance<T> {
     readonly root: Node<T> | undefined;
     readonly size: number;
