@@ -67,6 +67,7 @@ declare namespace min {
 
 declare namespace mheap {
   export interface Max<T = any> extends max.Instance<T> {}
+  export interface Min<T = any> extends min.Instance<T> {}
   export interface Node<T = any> extends node.Instance<T> {}
 }
 
