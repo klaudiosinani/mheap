@@ -54,7 +54,9 @@ declare namespace max {
     new <T = any>(): Instance<T>;
   }
 
-  export interface Instance<T = any> extends heap.Instance<T> {}
+  export interface Instance<T = any> extends heap.Instance<T> {
+    insert(key: number, value: T): this;
+  }
 }
 
 declare namespace min {
