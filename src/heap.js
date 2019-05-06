@@ -39,7 +39,7 @@ class Heap {
   }
 
   degree(index) {
-    return this.children(index).length;
+    return Object.keys(this.children(index)).length;
   }
 
   fullNodes() {
