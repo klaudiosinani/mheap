@@ -48,6 +48,22 @@ class Heap {
     return children;
   }
 
+  childrenIndices(index) {
+    const indices = {};
+    const left = this.leftIndex(index);
+    const right = this.rightIndex(index);
+
+    if (left < this.size) {
+      indices.left = left;
+    }
+
+    if (right < this.size) {
+      indices.right = right;
+    }
+
+    return indices;
+  }
+
   clear() {
     this._data = [];
     return this;
