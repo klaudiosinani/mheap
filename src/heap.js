@@ -18,10 +18,19 @@ class Heap {
   }
 
   children(index) {
-    return {
-      left: this.left(index),
-      right: this.right(index)
-    };
+    const children = {};
+    const left = this.left(index);
+    const right = this.right(index);
+
+    if (left) {
+      children.left = left;
+    }
+
+    if (right) {
+      children.right = right;
+    }
+
+    return children;
   }
 
   clear() {
