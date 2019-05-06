@@ -34,16 +34,11 @@ class Heap {
 
   children(index) {
     const children = {};
-    const left = this.left(index);
-    const right = this.right(index);
+    const indices = this.childrenIndices(index);
 
-    if (left) {
-      children.left = left;
-    }
-
-    if (right) {
-      children.right = right;
-    }
+    Object.keys(indices).forEach(index => {
+      children[index] = this.node(indices[index]);
+    });
 
     return children;
   }
