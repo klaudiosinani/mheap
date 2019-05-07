@@ -165,6 +165,10 @@ class Heap {
     return (2 * index) + 1;
   }
 
+  maxChild(index) {
+    return this._data[this.maxChildIndex(index)];
+  }
+
   maxChildIndex(index) {
     const {left, right} = this.childrenIndices(index);
 
