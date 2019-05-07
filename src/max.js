@@ -3,8 +3,16 @@ const Heap = require('./heap');
 const Node = require('./node');
 
 class Max extends Heap {
-  _areOrdered(parentIndex, childIndex) {
-    return this._data[parentIndex].key - this._data[childIndex].key > 0;
+  _isMaxOrdered(index) {
+    const indices = this.childrenIndices(index);
+
+    Object.keys(indices).forEach(x => {
+      if (this._compare(index, indices[x]) < 0) {
+        return false;
+      }
+    });
+
+    return true;
   }
 
   insert(key, value) {
