@@ -13,15 +13,14 @@ class Heap {
     return this._data.length;
   }
 
-  _compare(parentIndex, childIndex) {
-    const parent = this._data[parentIndex];
-    const child = this._data[childIndex];
+  _compare(i, j) {
+    const [x, y] = [this._data[i], this._data[j]];
 
-    if (parent.key > child.key) {
+    if (x.key > y.key) {
       return 1;
     }
 
-    if (parent.key < child.key) {
+    if (x.key < y.key) {
       return -1;
     }
 
