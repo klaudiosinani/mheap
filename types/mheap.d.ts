@@ -37,6 +37,7 @@ declare namespace heap {
     left(index: number): Node<T> | undefined;
     leftIndex(index: number): number;
     maxChild(index: number): Node<T> | undefined;
+    minChild(index: number): Node<T> | undefined;
     maxChildIndex(index: number): number;
     minChildIndex(index: number): number;
     node(index: number): Node<T> | undefined;
