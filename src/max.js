@@ -15,6 +15,25 @@ class Max extends Heap {
     return true;
   }
 
+  extractMax() {
+    if (this.size <= 1) {
+      return this._data.shift();
+    }
+
+    const {root: max} = this;
+    this._data[0] = this._data.pop();
+
+    let index = 0;
+
+    while (!this._isMaxOrdered(index)) {
+      const maxIndex = this.maxChildIndex(index);
+      this._swap(index, maxIndex);
+      index = maxIndex;
+    }
+
+    return max;
+  }
+
   insert(key, value) {
     const node = new Node(key, value);
     this._data.push(node);
