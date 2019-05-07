@@ -22,8 +22,8 @@ class Min extends Heap {
     let index = this.size - 1;
     let parentIndex = this.parentIndex(index);
 
-    while (parentIndex >= 0 && !this._areOrdered(parentIndex, index)) {
-      this._swap(parentIndex, index);
+    while (parentIndex >= 0 && this._compare(index, parentIndex) < 0) {
+      this._swap(index, parentIndex);
       index = parentIndex;
       parentIndex = this.parentIndex(index);
     }
