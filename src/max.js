@@ -22,22 +22,7 @@ class Max extends Heap {
   }
 
   extractMax() {
-    if (this.size <= 1) {
-      return this._data.shift();
-    }
-
-    const {root: max} = this;
-    this._data[0] = this._data.pop();
-
-    let index = 0;
-
-    while (!this._isMaxOrdered(index)) {
-      const maxIndex = this.maxChildIndex(index);
-      this._swap(index, maxIndex);
-      index = maxIndex;
-    }
-
-    return max;
+    return this.extract(0);
   }
 
   insert(key, value) {
