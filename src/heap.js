@@ -165,6 +165,20 @@ class Heap {
     return (2 * index) + 1;
   }
 
+  minChildIndex(index) {
+    const {left, right} = this.childrenIndices(index);
+
+    if (left) {
+      if (right && this._compare(left, right) > 0) {
+        return right;
+      }
+
+      return left;
+    }
+
+    return -1;
+  }
+
   node(index) {
     return this._data[index];
   }
