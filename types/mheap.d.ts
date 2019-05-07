@@ -78,6 +78,7 @@ declare namespace min {
 
   export interface Instance<T = any> extends heap.Instance<T> {
     insert(key: number, value: T): this;
+    remove(index: number): this;
   }
 }
 

@@ -30,6 +30,25 @@ class Min extends Heap {
 
     return this;
   }
+
+  remove(index) {
+    if (index >= 0 && index < this.size) {
+      if (index === this.size - 1) {
+        this._data.pop();
+      } else {
+        let currentIndex = index;
+        this._data[currentIndex] = this._data.pop();
+
+        while (!this._isMinOrdered(currentIndex)) {
+          const minIndex = this.minChildIndex(currentIndex);
+          this._swap(currentIndex, minIndex);
+          currentIndex = minIndex;
+        }
+      }
+    }
+
+    return this;
+  }
 }
 
 module.exports = Min;
