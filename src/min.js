@@ -15,6 +15,12 @@ class Min extends Heap {
     return true;
   }
 
+  extract(index) {
+    const node = this._data[index];
+    this.remove(index);
+    return node;
+  }
+
   insert(key, value) {
     const node = new Node(key, value);
     this._data.push(node);
