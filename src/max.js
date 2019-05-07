@@ -49,6 +49,25 @@ class Max extends Heap {
 
     return this;
   }
+
+  remove(index) {
+    if (index >= 0 && index < this.size) {
+      if (index === this.size - 1) {
+        this._data.pop();
+      } else {
+        let currentIndex = index;
+        this._data[currentIndex] = this._data.pop();
+
+        while (!this._isMaxOrdered(currentIndex)) {
+          const maxIndex = this.maxChildIndex(currentIndex);
+          this._swap(currentIndex, maxIndex);
+          currentIndex = maxIndex;
+        }
+      }
+    }
+
+    return this;
+  }
 }
 
 module.exports = Max;
