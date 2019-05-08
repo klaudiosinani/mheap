@@ -2,7 +2,7 @@
 const Heap = require('./heap');
 const Node = require('./node');
 
-class Max extends Heap {
+class MaxHeap extends Heap {
   _isMaxOrdered(index) {
     const indices = this.childIndices(index);
 
@@ -61,4 +61,4 @@ class Max extends Heap {
   }
 }
 
-module.exports = Max;
+module.exports = MaxHeap;
