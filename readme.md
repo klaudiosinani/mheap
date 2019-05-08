@@ -28,6 +28,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/mheap/blob/ma
 - [Description](#description)
 - [Install](#install)
 - [In Depth](#in-depth)
+- [Usage](#usage)
 - [Development](#development)
 - [Related](#related)
 - [Team](#team)
@@ -58,6 +59,91 @@ A binary heap is a heap data structure that takes the form of a binary tree, wit
 Heaps, where the parent key is greater than or equal to the child keys are called max-heaps, and those where it is less than or equal to are called min-heaps.
 
 Mheap binary min & max heaps are internally implemented with an array, where nodes are stored by the level order traversal of the heap and the root node is always placed at index 0. This is due to the fact that any binary tree can be stored in an array, but because a binary heap is always a complete binary tree, it can be compactly & uniquely represented by storing its level order traversal in an array. As a result, no space is required for pointers, instead, the parent and children of each node are found by arithmetic calculations on array indices.
+
+## Usage
+
+Mheap exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
+
+Usage examples can be also found at the [`test`](https://github.com/klaussinani/mheap/tree/master/test) directory.
+
+```js
+'use strict';
+const {MaxHeap, MinHeap, Node} = require('mheap');
+
+const maxHeap = new MaxHeap();
+//=> MaxHeap { data: [] }
+
+maxHeap.insert(15, 'A');
+//=> MaxHeap { data: [Node { key: 15, value: 'A' }] }
+
+maxHeap.root;
+//=> Node { key: 15, value: 'A' }
+
+const node = new Node(15, 'A');
+
+maxHeap.root.toPair();
+//=> [15, 'A']
+
+maxHeap.root.key === node.key;
+//=> true
+
+maxHeap.root.value === node.value;
+//=> true
+
+maxHeap.insert(10, 'B').insert(5, 'C');
+//=> MaxHeap { data: [
+// Node { key: 15, value: 'A' },
+// Node { key: 10, value: 'B' },
+// Node { key: 5, value: 'C' } ] }
+
+maxHeap.left(0);
+//=> Node { key: 10, value: 'B' }
+
+maxHeap.right(0);
+//=> Node { key: 5, value: 'C' }
+
+maxHeap.insert(7, 'D').insert(8, 'E').insert(2, 'F');
+//=> MaxHeap { data: [
+// Node { key: 15, value: 'A' },
+// Node { key: 10, value: 'B' },
+// Node { key: 5, value: 'C' },}
+// Node { key: 7, value: 'D' },
+// Node { key: 8, value: 'E' },
+// Node { key: 2, value: 'F' } ] }
+
+maxHeap.search(8);
+//=> Node { key: 8, value: 'E',
+
+maxHeap.includes(2);
+//=> true
+
+maxHeap.includes(100);
+//=> false
+
+maxHeap.height();
+//=> 2
+
+maxHeap.indexOf(7);
+//=> 3
+
+maxHeap.remove(1);
+//=> MaxHeap { data: [
+// Node { _key: 15, _value: 'A' },
+// Node { _key: 8, _value: 'E' },
+// Node { _key: 5, _value: 'C' },
+// Node { _key: 7, _value: 'D' },
+// Node { _key: 2, _value: 'F' } ] }
+
+maxHeap.children(0);
+//=> { left: Node { key: 8, value: 'E' },
+// right: Node { key: 5, value: 'C' } }
+
+maxHeap.extractMax();
+//=> Node { key: 15, value: 'A' }
+
+maxHeap.toPairs();
+//=> [ [ 8, 'E' ], [ 7, 'D' ], [ 5, 'C' ], [ 2, 'F' ] ]
+```
 
 ## Development
 
