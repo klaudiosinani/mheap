@@ -21,6 +21,10 @@ class Min extends Heap {
     return node;
   }
 
+  extractMin() {
+    return this.extract(0);
+  }
+
   insert(key, value) {
     const node = new Node(key, value);
     this._data.push(node);
