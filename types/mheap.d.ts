@@ -62,7 +62,7 @@ declare namespace max {
   }
 
   export interface Instance<T = any> extends heap.Instance<T> {
-    extract(index): Node<T> | undefined;
+    extract(index: number): Node<T> | undefined;
     extractMax(): Node<T> | undefined;
     insert(key: number, value: T): this;
     remove(index: number): this;
