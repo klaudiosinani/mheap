@@ -1,6 +1,6 @@
 'use strict';
-const Max = require('./src/max');
-const Min = require('./src/min');
+const MaxHeap = require('./src/max');
+const MinHeap = require('./src/min');
 const Node = require('./src/node');
 
-module.exports = Object.assign({}, {Max}, {Min}, {Node});
+module.exports = Object.assign({}, {MaxHeap}, {MinHeap}, {Node});
