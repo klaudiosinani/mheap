@@ -2,7 +2,7 @@
 const Heap = require('./heap');
 const Node = require('./node');
 
-class Min extends Heap {
+class MinHeap extends Heap {
   _isMinOrdered(index) {
     const indices = this.childIndices(index);
 
@@ -61,4 +61,4 @@ class Min extends Heap {
   }
 }
 
-module.exports = Min;
+module.exports = MinHeap;

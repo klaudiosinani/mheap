@@ -69,7 +69,7 @@ declare namespace maxHeap {
   }
 }
 
-declare namespace min {
+declare namespace minHeap {
   interface Node<T> extends node.Instance<T> {}
 
   export interface Constructor {
@@ -86,13 +86,13 @@ declare namespace min {
 
 declare namespace mheap {
   export interface MaxHeap<T = any> extends maxHeap.Instance<T> {}
-  export interface Min<T = any> extends min.Instance<T> {}
+  export interface MinHeap<T = any> extends minHeap.Instance<T> {}
   export interface Node<T = any> extends node.Instance<T> {}
 }
 
 declare const mheap: {
   MaxHeap: maxHeap.Constructor;
-  Min: min.Constructor;
+  MinHeap: minHeap.Constructor;
   Node: node.Constructor;
 };
 
