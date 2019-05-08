@@ -33,7 +33,7 @@ class Heap {
 
   children(index) {
     const children = {};
-    const indices = this.childrenIndices(index);
+    const indices = this.childIndices(index);
 
     Object.keys(indices).forEach(index => {
       children[index] = this.node(indices[index]);
@@ -42,7 +42,7 @@ class Heap {
     return children;
   }
 
-  childrenIndices(index) {
+  childIndices(index) {
     const indices = {};
     const left = this.leftIndex(index);
     const right = this.rightIndex(index);
@@ -170,7 +170,7 @@ class Heap {
   }
 
   maxChildIndex(index) {
-    const {left, right} = this.childrenIndices(index);
+    const {left, right} = this.childIndices(index);
 
     if (left) {
       if (right && this._compare(right, left) > 0) {
@@ -188,7 +188,7 @@ class Heap {
   }
 
   minChildIndex(index) {
-    const {left, right} = this.childrenIndices(index);
+    const {left, right} = this.childIndices(index);
 
     if (left) {
       if (right && this._compare(left, right) > 0) {

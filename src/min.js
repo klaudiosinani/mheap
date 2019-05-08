@@ -4,7 +4,7 @@ const Node = require('./node');
 
 class Min extends Heap {
   _isMinOrdered(index) {
-    const indices = this.childrenIndices(index);
+    const indices = this.childIndices(index);
 
     for (const i in indices) {
       if (this._compare(index, indices[i]) > 0) {

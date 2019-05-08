@@ -19,7 +19,7 @@ declare namespace heap {
     readonly root: Node<T> | undefined;
     readonly size: number;
     children(index: number): { left?: Node<T>; right?: Node<T> };
-    childrenIndices(index: number): { left?: number; right?: number };
+    childIndices(index: number): { left?: number; right?: number };
     clear(): this;
     degree(index: number): Degree;
     fullNodes(): Node<T>[];
