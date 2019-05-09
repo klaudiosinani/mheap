@@ -966,6 +966,56 @@ heap.insert(15, 'A').insert(10, 'B').insert(5, 'C').insert(8, 'D');
 //=> [ 'A', 'B', 'C', 'D' ]
 ```
 
+Also available, along with the `MaxHeap` & `MinHeap` exposed classes, is the `Node` class, mainly useful for testing purposes, since it can be utilized to compare heap nodes. The class has a binary constructor method, with a `key` and a `value` parameter, corresponding to the key and the value stored in the created instance, respectively.
+
+#### node.`key`
+
+- Return Type: `Number`
+
+The `key` corresponding to the node instance.
+
+```js
+const {Node} = require('mheap');
+
+const node = new Node(10, 'A');
+// => Node { key:10, value: 'A' }
+node.key;
+//=> 10
+```
+
+#### node.`value`
+
+- Return Type: `Any`
+
+The value that the node contains.
+
+```js
+const {Node} = require('mheap');
+
+const node = new Node(10, 'A');
+// => Node { key: 10, value: 'A' }
+node.value;
+//=> 'A'
+node.value = 'B'
+// => Node { key: 10, value: 'B' }
+```
+
+#### node.`toPair()`
+
+- Return Type: `[Number, Any]`
+
+Returns an ordered-pair/2-tuple, where the first element is a number corresponding to the `key` of the node, and the last one is a value, that can be of any type, corresponding to the `value` stored in the node.
+
+```js
+const {Node} = require('mheap');
+
+
+const node = new Node(5, 'B');
+
+node.toPair();
+//=> [ 5, 'B' ]
+```
+
 ## Development
 
 For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/mheap/blob/master/contributing.md).
