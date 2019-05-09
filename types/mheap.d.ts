@@ -18,8 +18,8 @@ declare namespace heap {
   export interface Instance<T> {
     readonly root: Node<T> | undefined;
     readonly size: number;
-    children(index: number): { left?: Node<T>; right?: Node<T> };
     childIndices(index: number): { left?: number; right?: number };
+    children(index: number): { left?: Node<T>; right?: Node<T> };
     clear(): this;
     degree(index: number): Degree;
     fullNodes(): Node<T>[];
