@@ -129,11 +129,11 @@ maxHeap.indexOf(7);
 
 maxHeap.remove(1);
 //=> MaxHeap { data: [
-// Node { _key: 15, _value: 'A' },
-// Node { _key: 8, _value: 'E' },
-// Node { _key: 5, _value: 'C' },
-// Node { _key: 7, _value: 'D' },
-// Node { _key: 2, _value: 'F' } ] }
+// Node { key: 15, value: 'A' },
+// Node { key: 8, value: 'E' },
+// Node { key: 5, value: 'C' },
+// Node { key: 7, value: 'D' },
+// Node { key: 2, value: 'F' } ] }
 
 maxHeap.children(0);
 //=> { left: Node { key: 8, value: 'E' },
