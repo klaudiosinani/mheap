@@ -152,7 +152,7 @@ The following documentation holds for both binary max & min heaps. The below des
 
 #### heap.`root`
 
-- Return Type: `Node | null`
+- Return Type: `Node | undefined`
 
 Returns the root node of the heap.
 If the heap is empty `undefined` is returned.
