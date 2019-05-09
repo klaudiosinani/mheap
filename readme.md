@@ -51,9 +51,9 @@ npm install mheap
 
 ## In Depth
 
-A binary heap is a heap data structure that takes the form of a binary heap, with two additional constraints:
+A binary heap is a heap data structure that takes the form of a binary tree, defined with two additional constraints:
 
-- **Shape property**: A binary heap is a complete binary tree, that is all levels, except possibly the last one / deepest are fully filled, and, if the last level of the tree is not complete, the nodes of that level are filled from left to right.
+- **Shape property**: A binary heap is a complete binary tree, that is all levels, except possibly the last one / deepest are fully filled, and if the last level of the tree is not complete, the nodes of that level are filled from left to right.
 
 - **Heap property**: The key stored in each node is either greater than or equal to or less than or equal to the keys in the node's children, according to the maximum & minimum total orders, respectively.
 
