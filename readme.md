@@ -53,13 +53,13 @@ npm install mheap
 
 A binary heap is a heap data structure that takes the form of a binary heap, with two additional constraints:
 
-- **Shape property**: A binary heap is a complete binary heap, that is all levels of the heap, except possibly the last one / deepest are fully filled, and, if the last level of the heap is not complete, the nodes of that level are filled from left to right.
+- **Shape property**: A binary heap is a complete binary tree, that is all levels, except possibly the last one / deepest are fully filled, and, if the last level of the tree is not complete, the nodes of that level are filled from left to right.
 
 - **Heap property**: The key stored in each node is either greater than or equal to or less than or equal to the keys in the node's children, according to the maximum & minimum total orders, respectively.
 
 Heaps, where the parent key is greater than or equal to the child keys are called max-heaps, and those where it is less than or equal to are called min-heaps.
 
-Mheap binary min & max heaps are internally implemented with an array, where nodes are stored by the level order traversal of the heap and the root node is always placed at index 0. This is due to the fact that any binary heap can be stored in an array, but because a binary heap is always a complete binary heap, it can be compactly & uniquely represented by storing its level order traversal in an array. As a result, no space is required for pointers, instead, the parent and children of each node are found by arithmetic calculations on array indices.
+Mheap binary min & max heaps are internally implemented with an array, where nodes are stored by the level order traversal of the heap and the root node is always placed at index 0. This is due to the fact that any binary tree can be stored in an array, but because a binary heap is always a complete binary tree, it can be compactly & uniquely represented by storing its level order traversal in an array. As a result, no space is required for pointers, instead, the parent and children of each node are found by arithmetic calculations on array indices.
 
 ## Usage
 
