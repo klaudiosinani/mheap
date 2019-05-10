@@ -58,6 +58,12 @@ test('leafNodes', t => {
   t.deepEqual(heap.leafNodes(), []);
 });
 
+test('levelOrder', t => {
+  const array = [];
+  heap.levelOrder(x => array.push(x));
+  t.deepEqual(array, []);
+});
+
 test('node', t => {
   t.is(heap.node(0), undefined);
 });
