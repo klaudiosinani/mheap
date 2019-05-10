@@ -628,6 +628,27 @@ heap.leftIndex(2);
 //=> 5
 ```
 
+#### heap.`levelOrder(fn)`
+
+- Return Type: `Heap`
+
+Applies level-order traversal (breadth-first traversal) to the heap and executes the provided `fn` function on each traversed node without mutating the heap. Returns the heap itself at the end of the traversal.
+
+##### **`fn`**
+
+- Type: `Function`
+
+Unary function to execute on each node.
+
+```js
+heap.insert(15, 'A').insert(10, 'B').insert(5, 'C').insert(8, 'D');
+heap.levelOrder(node => console.log(node.key));
+//=> 15
+//=> 10
+//=> 5
+//=> 8
+```
+
 #### heap.`maxChild(index)`
 
 - Return Type: `Node | undefined`
