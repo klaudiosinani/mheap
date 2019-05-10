@@ -36,6 +36,7 @@ declare namespace heap {
     leafNodes(): Node<T>[];
     left(index: number): Node<T> | undefined;
     leftIndex(index: number): number;
+    levelOrder(fn: (x: Node<T>) => void): this;
     maxChild(index: number): Node<T> | undefined;
     maxChildIndex(index: number): number;
     minChild(index: number): Node<T> | undefined;

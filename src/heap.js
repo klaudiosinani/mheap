@@ -165,6 +165,11 @@ class Heap {
     return (2 * index) + 1;
   }
 
+  levelOrder(fn) {
+    this._data.forEach(node => fn(node));
+    return this;
+  }
+
   maxChild(index) {
     return this._data[this.maxChildIndex(index)];
   }

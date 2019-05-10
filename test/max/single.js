@@ -122,6 +122,12 @@ test('leftIndex', t => {
   t.is(heap.leftIndex(0), 1);
 });
 
+test('levelOrder', t => {
+  const array = [];
+  heap.levelOrder(x => array.push(x));
+  t.deepEqual(array, [new Node(15, 'A')]);
+});
+
 test('maxChild', t => {
   t.is(heap.maxChild(0), undefined);
 });
