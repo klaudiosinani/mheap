@@ -171,7 +171,7 @@ Returns the total number of nodes residing in the heap.
 
 ```js
 heap.insert(15, 'A').insert(10, 'B').insert(5, 'C');
-heap.size();
+heap.size;
 // => 3
 ```
 
@@ -243,7 +243,7 @@ heap.size;
 
 - Return Type: `Number`
 
-Returns the number of sub-trees that the node, corresponding to the give index, points to.
+Returns the number of sub-heaps that the node, corresponding to the give index, points to.
 
 ##### **`index`**
 
