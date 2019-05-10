@@ -1,6 +1,6 @@
 {
   "name": "mheap",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "🌳 Binary min & max heaps for ES6",
   "license": "MIT",
   "repository": "klaussinani/mheap",
