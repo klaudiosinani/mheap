@@ -65,7 +65,7 @@ Mheap binary min & max heaps are internally implemented with an array, where nod
 
 Mheap exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
 
-Usage examples can be also found at the [`test`](https://github.com/klaussinani/mheap/heap/master/test) directory.
+Usage examples can be also found at the [`test`](https://github.com/klaussinani/mheap/tree/master/test) directory.
 
 ```js
 'use strict';
