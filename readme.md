@@ -113,7 +113,7 @@ maxHeap.insert(7, 'D').insert(8, 'E').insert(2, 'F');
 // Node { key: 2, value: 'F' } ] }
 
 maxHeap.search(8);
-//=> Node { key: 8, value: 'E',
+//=> Node { key: 8, value: 'E' }
 
 maxHeap.includes(2);
 //=> true
