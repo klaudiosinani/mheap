@@ -239,7 +239,7 @@ heap.size;
 //=> 0
 ```
 
-#### node.`degree(index)`
+#### heap.`degree(index)`
 
 - Return Type: `Number`
 
