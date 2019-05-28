@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  🌳 Binary min & max heaps for ES6
+  Binary min & max heaps for ES6
 </h4>
 
 <p align="center">
